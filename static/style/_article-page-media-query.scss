@@ -1,0 +1,36 @@
+/* Media Queries for article pages*/
+
+@media (max-width: 550px) {
+    .article_content_page {
+        padding: .5rem 1rem;
+        padding-bottom: 4rem;
+
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 0rem;
+        }
+    }
+
+    .share-btn-container {
+        transform: unset;
+        top: unset;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        flex-direction: row;
+        box-shadow: 0.25rem 0 .5rem rgba(0, 0, 0, 0.3);
+        padding: 1rem 0;
+        justify-content: center;
+
+        a {
+            margin: 0 1rem;
+        }
+        
+    }
+    .scrollBtn {
+        position: fixed;
+        right: 0.7rem;
+        bottom: 5rem;
+    }
+}

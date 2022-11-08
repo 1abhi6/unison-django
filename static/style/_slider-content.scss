@@ -1,0 +1,68 @@
+// This file contains all the SCSS for the Home page slider
+
+// Slider
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    /* Center slide text vertically */
+
+    @include flex_box(center, center);
+}
+
+// To fit an image in the slider
+
+.swiper-slide {
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+    }
+}
+
+// Content over the slider
+
+// Content section
+
+.content {
+    height: 35rem;
+    // background-color: rgb(192, 146, 146);
+    @include flex_box(none, none);
+    padding: 0.7rem;
+    .content_left {
+        font-family: $font1;
+        @include flex_box(center, none);
+        flex-direction: column;
+        h1 {
+            font-size: 2.3rem;
+            padding: 0rem;
+            margin: 0rem;
+            text-align: left;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 0rem;
+            text-align: left;
+        }
+        .btn {
+            width: 8rem;
+        }
+    }
+    .content_right {
+        width: 50%;
+        @include flex_box(center, center);
+        img {
+            height: 20rem;
+            width: auto;
+        }
+    }
+}
+
+.img_slider_anchor {
+    display: inline-block;
+}
+

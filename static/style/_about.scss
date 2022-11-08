@@ -1,0 +1,94 @@
+// CSS for about us page
+
+// Utils for about page
+$about_head_font_size: 2rem;
+$about_content_font_size: 1.5rem;
+
+.about {
+    // border: 1px solid rgb(204, 248, 248);
+    @include flex_box(center, center);
+    padding: 2rem;
+    height: auto;
+    width: 80vw;
+    margin: auto; // To place the entire div in center
+    font-family: $font2;
+
+    .about_content {
+        @include flex_box(center, normal);
+        flex-direction: column;
+        color: $btn_main_color;
+        h1,
+        h2,
+        h3 {
+            font-size: $about_head_font_size;
+            // letter-spacing: 0.1rem;
+            // font-family: $font3;
+            font-weight: 900;
+        }
+
+        li,
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        p{
+            span{
+                display: inline-block
+            }
+        }
+
+        .social_icons {
+            ul {
+                @include flex_box(flex-start, center);
+                padding-left: 0;
+                li {
+                    list-style: none;
+                    a {
+                        margin: 0rem 1rem;
+                        font-size: 2rem;
+                        color: $btn_main_color;
+                        i {
+                            transition: all 0.2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .about_image{
+        img{
+            height: 25rem;
+
+        }
+    }
+}
+
+// Social media hover 
+
+.facebook:hover{
+    color: $facebook_color;
+}
+.instagram:hover{
+    color: $instagram_color;
+}
+.twitter:hover{
+    color: $twitter_color;
+}
+.youtube:hover{
+    color: $youtube_color;
+}
+
+
+// Responsive design 
+
+@media (min-width: 240px) and (max-width: 1200px) {
+    .about{
+        flex-direction: column-reverse;
+        width: 100vw;
+    }
+    .about_image{
+        img{
+            height: 15rem !important;
+        }
+    }
+}

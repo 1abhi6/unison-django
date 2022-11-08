@@ -1,0 +1,83 @@
+// Article section
+
+/* Content */
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.article_content_page {
+    padding: 1rem 5.625rem;
+    font-family: $font2;
+
+    h1 {
+        font-family: $article_header_font;
+        font-size: 3.5rem;
+    }
+    p {
+        line-height: 1.9;
+        font-size: 1rem;
+    }
+
+    img {
+        max-height: 31.25rem;
+        max-width: 18.125rem;
+    }
+}
+
+/* Share Buttons */
+
+.share-btn-container {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    a i {
+        font-size: 2rem;
+    }
+    a {
+        margin: 0.75rem 0;
+        transition: 500ms;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.share-btn-container .fa-facebook {
+    color: #3b5998;
+}
+
+.share-btn-container .fa-twitter {
+    color: #1da1f2;
+}
+
+.share-btn-container .fa-telegram {
+    color: #0088CC;
+}
+
+.share-btn-container .fa-pinterest {
+    color: #bd081c;
+}
+
+.share-btn-container .fa-whatsapp {
+    color: #25d366;
+}
+
+// Scroll to top buttom
+
+.scrollBtn {
+    position: fixed;
+    right: 4rem;
+    bottom: 5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: .7rem 1rem;
+    border-radius: 50%;
+    opacity: .8;
+// border: none;
+}

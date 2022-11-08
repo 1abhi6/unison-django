@@ -1,0 +1,209 @@
+// Importing necessary files
+
+@import "utils";
+@import "mobile";
+@import "about";
+@import "slider-content";
+@import "blog";
+@import "article-page";
+@import "article-page-media-query";
+
+// CSS Reset
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+::selection {
+    color: $selection_color;
+}
+body {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+// ***************************
+// ****** Main Styling *******
+// ***************************
+
+// Navigation bar
+
+#openSideBarMenu {
+    display: none;
+}
+
+.navigation {
+    height: 6rem;
+    // background-color: aqua;
+    @include flex_box(space-between, center);
+    font-family: $font1;
+    padding: 0.4rem;
+    // margin-top: .8rem;
+    .nav_left {
+        @include flex_box(center, center);
+
+        a {
+            font-size: 2.5rem;
+            font-family: $header_font;
+            text-decoration: none;
+            color: $header_text_color;
+            letter-spacing: 0.1rem;
+            span {
+                color: #ff7900;
+            }
+        }
+        ul {
+            @include flex_box(center, center);
+            margin: 0rem 1.5rem;
+            li {
+                list-style: none;
+                padding: 0rem 1rem;
+                a {
+                    text-decoration: none;
+                    margin: 0rem 0.8rem;
+                    text-transform: capitalize;
+                    font-family: $font2;
+                    color: $header_text_color;
+                    letter-spacing: 0.1rem;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    padding-bottom: 0.3rem;
+                    transition: all 0.3s ease;
+
+                    i {
+                        &:hover {
+                            color: $font_color;
+                        }
+                    }
+                    &:hover {
+                        color: $font_color;
+                    }
+                }
+            }
+        }
+    }
+
+    // For search bar
+    .nav_right {
+        .search_icon {
+            display: none;
+        }
+        .social_icons {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                li {
+                    list-style: none;
+                    a {
+                        margin: 0rem 1rem;
+                        font-size: 2rem;
+                        color: $btn_main_color;
+                        i {
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+        .search_btn {
+            background-color: $btn_main_color;
+            color: white;
+            &:hover {
+                color: $btn_main_color;
+                background: white;
+            }
+        }
+    }
+}
+
+// For the popup
+.popup_close {
+    display: none;
+}
+
+// Home Page article
+
+.home_articles {
+    height: auto;
+    // background-color: rgb(180, 180, 180);
+    padding: 0.7rem;
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    .home_article {
+        display: flex;
+        padding: 2rem;
+        text-decoration: none;
+        color: $font_color;
+        transition: all 0.1s ease-in;
+
+        &:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .home_article_img {
+            align-self: center;
+            img {
+                height: 8rem;
+            }
+        }
+
+        .home_article_content {
+            align-self: center;
+            padding: 0rem 2rem;
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p,
+            span {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+    }
+    .show_more {
+        color: $btn_main_color;
+        text-decoration: none;
+        margin-top: 2rem;
+        .show_more_btn {
+            margin-top: 1rem;
+            &:hover {
+                color: white;
+                background-color: $btn_main_color;
+            }
+        }
+    }
+}
+
+// Footer section
+
+.footer {
+    height: 6rem;
+    // background-color: $main_bg_color;
+    color: rgb(39, 39, 39);
+    @include flex_box(center, center);
+    flex-direction: column;
+    p {
+        font-size: 1rem;
+        margin: 0.5rem;
+        a {
+            color: $font_color;
+            text-decoration: none;
+            .far {
+                font-size: 1.2rem;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
